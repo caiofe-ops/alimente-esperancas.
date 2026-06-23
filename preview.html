@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alimente Esperanças</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8faf8;
+    color:#333;
+}
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(255,255,255,0.95);
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,0.08);
+}
+
+.logo{
+    font-size:1.5rem;
+    font-weight:700;
+    color:#2e7d32;
+}
+
+nav a{
+    text-decoration:none;
+    color:#444;
+    margin-left:25px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#2e7d32;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    background:
+    linear-gradient(rgba(0,0,0,0.65),
+    rgba(0,0,0,0.65)),
+    url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1400&q=80');
+    background-size:cover;
+    background-position:center;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.btn{
+    display:inline-block;
+    background:#43a047;
+    color:white;
+    padding:15px 35px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+section{
+    padding:90px 10%;
+}
+
+.titulo{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.titulo h2{
+    color:#2e7d32;
+    font-size:2.5rem;
+}
+
+.stats{
+    background:white;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.stat-card{
+    background:#f1f8e9;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-5px);
+}
+
+.stat-card h3{
+    font-size:2.5rem;
+    color:#2e7d32;
+    margin-bottom:10px;
+}
+
+.about{
+    background:#f8faf8;
+}
+
+.about p{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    line-height:1.9;
+    font-size:1.1rem;
+}
+
+.doacao{
+    background:white;
+}
+
+.formulario{
+    max-width:700px;
+    margin:auto;
+    background:#f9f9f9;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:1rem;
+}
+
+.formulario button{
+    width:100%;
+    padding:15px;
+    border:none;
+    background:#2e7d32;
+    color:white;
+    font-size:1rem;
+    font-weight:600;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.formulario button:hover{
+    background:#256728;
+}
+
+.cta{
+    background:linear-gradient(135deg,#2e7d32,#43a047);
+    color:white;
+    text-align:center;
+}
+
+.cta h2{
+    margin-bottom:20px;
+    font-size:2.5rem;
+}
+
+footer{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:10px;
+}
+
+.hero h1{
+    font-size:2.6rem;
+}
+
+.hero p{
+    font-size:1rem;
+}
+
+nav a{
+    margin:0 10px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">🍽️ Alimente Esperanças</div>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#impacto">Impacto</a>
+        <a href="#sobre">Por que doar?</a>
+        <a href="#doacao">Doar</a>
+    </nav>
+</header>
+
+<section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+        <h1>Ninguém deveria dormir com fome.</h1>
+
+        <p>
+            Enquanto toneladas de alimentos são desperdiçadas diariamente,
+            milhões de pessoas enfrentam a insegurança alimentar.
+            Sua doação pode transformar vidas e levar esperança para quem mais precisa.
+        </p>
+
+        <a href="#doacao" class="btn">Quero Doar</a>
+
+    </div>
+
+</section>
+
+<section class="stats" id="impacto">
+
+    <div class="titulo">
+        <h2>A realidade da fome</h2>
+    </div>
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <h3>733M</h3>
+            <p>Pessoas enfrentam a fome no mundo.</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>2,3B</h3>
+            <p>Pessoas vivem com insegurança alimentar.</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>1 Doação</h3>
+            <p>Pode garantir refeições para uma família.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="about" id="sobre">
+
+    <div class="titulo">
+        <h2>Por que doar alimentos?</h2>
+    </div>
+
+    <p>
+        A doação de alimentos ajuda a combater a fome, reduz o desperdício e
+        fortalece comunidades. Um simples pacote de arroz, feijão ou macarrão
+        pode representar uma refeição completa para alguém que passa por
+        dificuldades. Cada contribuição gera impacto imediato e ajuda a
+        construir uma sociedade mais justa e solidária.
+    </p>
+
+</section>
+
+<section class="doacao" id="doacao">
+
+    <div class="titulo">
+        <h2>Faça sua doação</h2>
+    </div>
+
+    <form class="formulario">
+
+        <input type="text" placeholder="Nome completo" required>
+
+        <input type="email" placeholder="E-mail" required>
+
+        <input type="tel" placeholder="Telefone" required>
+
+        <input type="text" placeholder="Cidade" required>
+
+        <select required>
+            <option value="">Tipo de alimento</option>
+            <option>Arroz</option>
+            <option>Feijão</option>
+            <option>Macarrão</option>
+            <option>Leite</option>
+            <option>Óleo</option>
+            <option>Outros</option>
+        </select>
+
+        <textarea rows="5"
+        placeholder="Descreva os alimentos e quantidades que deseja doar"></textarea>
+
+        <button type="submit">Enviar Doação</button>
+
+    </form>
+
+</section>
+
+<section class="cta">
+
+    <h2>Cada alimento doado representa esperança.</h2>
+
+    <p>
+        Junte-se a milhares de pessoas que acreditam que ninguém deveria passar fome.
+    </p>
+
+</section>
+
+<footer>
+    © 2026 Alimente Esperanças • Combatendo a fome através da solidariedade.
+</footer>
+
+</body>
+</html>
